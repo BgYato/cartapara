@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { content } from '../data/content';
 import { KeyRound, Unlock, HelpCircle, CheckCircle2 } from 'lucide-react';
+import { asset } from '../utils/asset';
 
 // Splits the cipherText and answer by hyphens into word groups
 // e.g. "VWDUW-PZMASE-AAQJMBQG" -> ["VWDUW", "PZMASE", "AAQJMBQG"]
@@ -138,7 +139,7 @@ export default function Challenge({ onUnlock }) {
 
         {/* Animated Cutout */}
         <motion.img
-          src="/antique_key.png"
+          src={asset('antique_key.png')}
           alt="Key"
           animate={{ rotate: [-5, 5, -5] }}
           transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut' }}

@@ -1,22 +1,22 @@
-# 💌 Carta Para Monica
+# Carta Para Monica :3
 
-> Una carta de amor interactiva con estética vintage, construida en React + Vite. Un espacio personalizado y cifrado, creado especialmente para su cumpleaños.
-
----
-
-## ✨ Características
-
-- 🔐 **Reto de acceso** con dos capas de seguridad: respuesta libre + cifrado Vigenère
-- 📜 **Carta personal** con tipografía estilo diario
-- 🖼️ **Galería de momentos** con fotos reales en un tablero de corcho interactivo (arrastrables + efecto scratch)
-- 🎵 **Reproductor de música propio** con disco de vinilo animado y brazo tocadiscos
-- 💬 **Detalles personales** y mensaje final
-- 🎨 Estética **vintage / scrapbook** con animaciones fluidas (Framer Motion)
-- 📱 Aviso de uso exclusivo en desktop
+> Una carta de amor interactiva con estética vintage, construida en React + Vite. Un espacio personalizado y cifrado, creado especialmente para aquella persona especial.
 
 ---
 
-## 🛠️ Tech Stack
+## Características
+
+- **Reto de acceso** con dos capas de seguridad: respuesta libre + cifrado Vigenère
+- **Carta personal** con tipografía estilo diario
+- **Galería de momentos** con fotos reales en un tablero de corcho interactivo (arrastrables + efecto scratch)
+- **Reproductor de música propio** con disco de vinilo animado y brazo tocadiscos
+- **Detalles personales** y mensaje final
+- **Estética** vintage / scrapbook con animaciones fluidas (Framer Motion)
+- **Aviso** de uso exclusivo en desktop
+
+---
+
+## Tech Stack
 
 | Tecnología | Uso |
 |---|---|
@@ -29,7 +29,7 @@
 
 ---
 
-## 📁 Estructura del proyecto
+## Estructura del proyecto
 
 ```
 cartapara/
@@ -58,7 +58,7 @@ cartapara/
 
 ---
 
-## 🚀 Instalación y desarrollo local
+## Instalación y desarrollo local
 
 ```bash
 # 1. Clona el repositorio
@@ -76,7 +76,7 @@ Abre [http://localhost:5173/cartapara/](http://localhost:5173/cartapara/) en tu 
 
 ---
 
-## 📦 Deploy en GitHub Pages
+## Deploy en GitHub Pages
 
 ### Primera vez (configuración):
 1. Asegúrate de que tu repositorio en GitHub se llama `cartapara`.
@@ -91,12 +91,12 @@ Esto hace automáticamente:
 1. **Build** del proyecto (`npm run build`)
 2. **Sube** la carpeta `dist/` a la rama `gh-pages`
 
-Tu carta quedará disponible en:
+Tu carta quedará disponible en (ejemplo):
 **https://yatwa.github.io/cartapara/**
 
 ---
 
-## ✏️ Personalización
+## Personalización
 
 Todo el contenido editable está centralizado en `src/data/content.js`:
 - Textos de la carta

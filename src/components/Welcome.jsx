@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { content } from '../data/content';
+import { asset } from '../utils/asset';
 
 export default function Welcome() {
   const navigate = useNavigate();
@@ -16,7 +17,7 @@ export default function Welcome() {
     >
       {/* Animated Cutout: Growing Flower */}
       <motion.img 
-        src="/growing_flower.png" 
+        src={asset('growing_flower.png')} 
         alt="Flower" 
         animate={{ scale: [1, 1.04, 1], rotate: [-2, 2, -2] }}
         transition={{ repeat: Infinity, duration: 8, ease: "easeInOut" }}

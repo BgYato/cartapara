@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { content } from '../data/content';
 import { ArrowRight } from 'lucide-react';
+import { asset } from '../utils/asset';
 
 export default function Final() {
   const navigate = useNavigate();
@@ -16,7 +17,7 @@ export default function Final() {
     >
       {/* Animated Cutout: Growing Flower */}
       <motion.img 
-        src="/growing_flower.png" 
+        src={asset('growing_flower.png')} 
         alt="Flower" 
         animate={{ scale: [1, 1.06, 1], rotate: [-3, 3, -3], y: [0, -6, 0] }}
         transition={{ repeat: Infinity, duration: 9, ease: "easeInOut" }}
@@ -24,7 +25,7 @@ export default function Final() {
       />
       {/* Animated Cutout: Moon ambiance */}
       <motion.img 
-        src="/vintage_moon.png" 
+        src={asset('vintage_moon.png')} 
         alt="Moon" 
         animate={{ scale: [1, 1.08, 1], opacity: [0.5, 0.85, 0.5] }}
         transition={{ repeat: Infinity, duration: 10, ease: "easeInOut" }}

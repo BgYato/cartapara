@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { content } from '../data/content';
 import { ArrowRight } from 'lucide-react';
+import { asset } from '../utils/asset';
 
 export default function Details() {
   const navigate = useNavigate();
@@ -17,7 +18,7 @@ export default function Details() {
     >
       {/* Animated Cutout: Moon */}
       <motion.img 
-        src="/vintage_moon.png" 
+        src={asset('vintage_moon.png')} 
         alt="Moon" 
         animate={{ scale: [1, 1.08, 1], opacity: [0.85, 1, 0.85] }}
         transition={{ repeat: Infinity, duration: 8, ease: "easeInOut" }}

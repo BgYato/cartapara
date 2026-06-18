@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { content } from '../data/content';
 import { ArrowRight, Play, Pause, RotateCcw, Volume2, VolumeX } from 'lucide-react';
+import { asset } from '../utils/asset';
 
 function VintagePlayer() {
   const audioRef = useRef(null);
@@ -139,7 +140,7 @@ function VintagePlayer() {
       {/* Hidden HTML5 Audio Element playing song.mp3 */}
       <audio
         ref={audioRef}
-        src="/song.mp3"
+        src={asset('song.mp3')}
         onPlay={() => setIsPlaying(true)}
         onPause={() => setIsPlaying(false)}
         onTimeUpdate={handleTimeUpdate}
@@ -151,8 +152,8 @@ function VintagePlayer() {
 
       {/* Vintage Paper Texture Overlay */}
       <div 
-        className="absolute inset-0 bg-[url('/vintage/vintage_paper.png')] opacity-15 pointer-events-none mix-blend-multiply" 
-        style={{ backgroundSize: 'cover' }}
+        className="absolute inset-0 opacity-15 pointer-events-none mix-blend-multiply"
+        style={{ backgroundImage: `url(${asset('vintage/vintage_paper.png')})`, backgroundSize: 'cover' }}
       />
 
       {/* Turn Table Vinyl Container */}
@@ -172,7 +173,7 @@ function VintagePlayer() {
           {/* Label in center */}
           <div className="w-7 h-7 rounded-full bg-[#b8928f] border border-neutral-800 flex items-center justify-center overflow-hidden relative shadow-sm">
             <img
-              src="/vintage/vintage_rose.png"
+              src={asset('vintage/vintage_rose.png')}
               alt="Rose Center"
               className="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-multiply"
             />
@@ -303,7 +304,7 @@ export default function Music() {
     >
       {/* Animated Cutout: Violin */}
       <motion.img 
-        src="/vintage_violin.png" 
+        src={asset('vintage_violin.png')} 
         alt="Violin" 
         animate={{ rotate: [-4, 4, -4] }}
         transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
@@ -311,7 +312,7 @@ export default function Music() {
       />
 
       <motion.img 
-        src="/vintage_lip.png" 
+        src={asset('vintage_lip.png')} 
         alt="Lip" 
         animate={{ scale: [1, 1.04, 1], rotate: [-2, 2, -2] }}
         transition={{ repeat: Infinity, duration: 8, ease: "easeInOut" }}

@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { Home } from 'lucide-react';
+import { asset } from '../utils/asset';
 
 export default function Farewell() {
   const navigate = useNavigate();
@@ -38,7 +39,7 @@ export default function Farewell() {
       {scatteredImages.map((img, index) => (
         <motion.img
           key={index}
-          src={img.src}
+          src={asset(img.src)}
           alt="Vintage decor"
           initial={{ opacity: 0, scale: 0.8, rotate: img.rotate - 10 }}
           animate={{ 

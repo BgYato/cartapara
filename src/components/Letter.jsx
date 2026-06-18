@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { content } from '../data/content';
 import { ArrowRight } from 'lucide-react';
+import { asset } from '../utils/asset';
 
 export default function Letter() {
   const navigate = useNavigate();
@@ -17,7 +18,7 @@ export default function Letter() {
     >
       {/* Animated Cutout: Vintage Doll */}
       <motion.img 
-        src="/vintage_doll.png" 
+        src={asset('vintage_doll.png')} 
         alt="Doll" 
         animate={{ rotate: [-2, 2, -2], y: [0, -6, 0] }}
         transition={{ repeat: Infinity, duration: 7, ease: "easeInOut" }}
@@ -62,7 +63,7 @@ export default function Letter() {
         Continuar <ArrowRight size={16} />
       </motion.button>
       <motion.img 
-        src="/growing_flower.png" 
+        src={asset('growing_flower.png')} 
         alt="Flower" 
         animate={{ scale: [1, 1.04, 1], rotate: [-2, 2, -2] }}
         transition={{ repeat: Infinity, duration: 8, ease: "easeInOut" }}

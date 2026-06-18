@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { HashRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
+import { asset } from './utils/asset';
 
 import Welcome from './components/Welcome';
 import Challenge from './components/Challenge';
@@ -43,7 +44,7 @@ function AnimatedRoutes({ isUnlocked, setIsUnlocked }) {
             animate={{ scaleX: 0, transition: { duration: 0 } }}
             exit={{ scaleX: 1, transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] } }}
           >
-             <div className="absolute inset-0 bg-[url('/bg-botanical-transition.png')] opacity-60 mix-blend-multiply bg-cover bg-center" />
+             <div className="absolute inset-0 opacity-60 mix-blend-multiply bg-cover bg-center" style={{ backgroundImage: `url(${asset('bg-botanical-transition.png')})` }} />
           </motion.div>
 
           {/* Curtain Slide Out (When entering route) */}
@@ -53,7 +54,7 @@ function AnimatedRoutes({ isUnlocked, setIsUnlocked }) {
             animate={{ scaleX: 0, transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] } }}
             exit={{ scaleX: 0, transition: { duration: 0 } }}
           >
-             <div className="absolute inset-0 bg-[url('/bg-botanical-transition.png')] opacity-60 mix-blend-multiply bg-cover bg-center" />
+             <div className="absolute inset-0 opacity-60 mix-blend-multiply bg-cover bg-center" style={{ backgroundImage: `url(${asset('bg-botanical-transition.png')})` }} />
           </motion.div>
           
         </motion.div>

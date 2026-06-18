@@ -3,6 +3,7 @@ import { motion, useDragControls } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { content } from '../data/content';
 import { ArrowRight } from 'lucide-react';
+import { asset } from '../utils/asset';
 
 const ScratchCard = ({ image, caption }) => {
   const canvasRef = useRef(null);
@@ -131,7 +132,7 @@ const DraggablePhoto = ({ photo, index, boardRef }) => {
         className="w-full h-full cursor-grab active:cursor-grabbing"
         onPointerDown={(e) => controls.start(e)}
       >
-        <ScratchCard image={photo.path} caption={photo.caption} />
+        <ScratchCard image={asset(photo.path)} caption={photo.caption} />
       </div>
     </motion.div>
   );
@@ -152,7 +153,7 @@ export default function Moments() {
     >
       {/* Animated Cutout: Dancing Couple */}
       <motion.img 
-        src="/couple_dancing.png" 
+        src={asset('couple_dancing.png')} 
         alt="Couple Dancing" 
         animate={{ 
           x: [0, 6, 3, -3, -6, -3, 3, 0],
@@ -169,7 +170,7 @@ export default function Moments() {
       />
 
       <motion.img 
-        src="/vintage_trumpet.png" 
+        src={asset('vintage_trumpet.png')} 
         alt="Trumpet" 
         animate={{ scale: [1, 1.04, 1], rotate: [-2, 2, -2] }}
         transition={{ repeat: Infinity, duration: 8, ease: "easeInOut" }}
