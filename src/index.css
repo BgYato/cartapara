@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-handwriting: "Caveat", cursive;
+  --font-mono: "Fira Code", monospace;
+
+  --color-paper-light: #f4f1ea;
+  --color-paper-dark: #e8e3d8;
+  --color-ink-light: #5c554b;
+  --color-ink-dark: #3a352d;
+  --color-olive: #6b705c;
+  --color-rose-faded: #b8928f;
+  --color-sepia: #c8bca7;
+}
+
+@layer base {
+  body {
+    @apply text-ink-dark font-sans antialiased selection:bg-rose-faded selection:text-white;
+    /* Degradado pastel vintage: crema → rosa empolvado → arena cálido */
+    background: linear-gradient(
+      135deg,
+      #f9f4ef 0%,
+      #f2e8e3 30%,
+      #ede0d4 60%,
+      #e8ddd0 100%
+    );
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+
+  button,
+  a {
+    cursor: pointer !important;
+  }
+}
+
+.magazine-cutout {
+  pointer-events: none;
+  filter: sepia(0.4) contrast(1.05) brightness(0.95);
+  drop-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-sepia rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-ink-light;
+}
+
+/* Custom Continue Navigation Button */
+.btn-continue {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #3a352d;
+  /* ink-dark */
+  color: #f4f1ea;
+  /* paper-light */
+  padding: 10px 24px;
+  border-radius: 9999px;
+  font-family: "Inter", system-ui, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+  /* text-xs */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(200, 188, 167, 0.3);
+  /* sepia/30 */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 30;
+  cursor: pointer;
+}
+
+.btn-continue:hover {
+  background-color: #6b705c;
+  /* olive */
+  color: #f4f1ea;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+}
+
+.btn-continue:active {
+  transform: translateY(0);
+}
