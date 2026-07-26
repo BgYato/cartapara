@@ -68,8 +68,7 @@ export default function Welcome() {
                 transition={{ delay: 0.5, duration: 0.8 }}
                 className="font-serif italic text-lg md:text-xl text-ink-light leading-relaxed"
               >
-                {message} Ahora puedes elegir la sección que quieras ver sin
-                entrar primero en las partes internas del desafío.
+                {message} Elije la sección que deseas explorar y disfruta de la experiencia. Recuerda que te amo.
               </motion.p>
             </div>
 
